@@ -45,7 +45,7 @@ pair <string, long int> generateQuestion(int operatorIndex, int level)
 				num2 = rand() % 100 + 1;
 			}
 		}
-		cout << num << " ";
+		// 		cout << num << " ";
 		long int result;
 
 
@@ -74,20 +74,20 @@ pair <string, long int> generateQuestion(int operatorIndex, int level)
 
 		else if (operatorIndex == 3)
 		{
-			result = srand() % range() + 1;
+			result = rand() % range + 1;
 
 			if (result > 50)
 			{
-				result = srand() % 50 + 1;
+				result = rand() % 50 + 1;
 			}
-			
-			num2 = srand() % range() + 1;
-	
-			if (num2 >= 100)]
-				num2 = srand() % 100 + 1;
+
+			num2 = rand() % range + 1;
+
+			if (num2 >= 100)
+				num2 = rand() % 100 + 1;
 
 			num1 = num2 * result;
-			
+
 			question = "";
 			question += to_string(num1);
 			question += '/';
@@ -112,16 +112,16 @@ int main()
 
 
 
-    for(int i=1;i<=10;i++)
-    {
-        for(int j=0;j<=4;j++)
-        {
+	for (int i = 1; i <= 10; i++)
+	{
+		for (int j = 0; j <= 4; j++)
+		{
 			temp = generateQuestion(j, i);
-			cout << temp.first << " " << temp.second<<endl;
-	         
-        }
-        
-    }
+			cout << temp.first << " " << temp.second << endl;
+
+		}
+
+	}
 
 
 
