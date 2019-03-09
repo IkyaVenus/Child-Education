@@ -1,5 +1,6 @@
 #pragma once
 #include "OperatorsMain.h"
+#include "Cricket.h"
 
 namespace FunBrainz {
 
@@ -92,7 +93,7 @@ namespace FunBrainz {
 				 } 
 				 MessageBox::Show("Hi"); 
 				 Login::Hide(); 
-				 OperatorsMain ^ form = gcnew OperatorsMain; 
+				 Cricket ^ form = gcnew Cricket; 
 				 form->ShowDialog();
 	}
 	};

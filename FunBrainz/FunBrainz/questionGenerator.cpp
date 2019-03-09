@@ -101,7 +101,7 @@ pair <string, long int> generateQuestion(int operatorIndex, int level)
 
 }
 
-int main()
+/*int main()
 {
 	srand(time(0));
 	pair < string, long int > temp;
@@ -123,8 +123,4 @@ int main()
 
 	}
 
-
-
-
-
-}
+}*/
