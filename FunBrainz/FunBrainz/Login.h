@@ -79,9 +79,20 @@ namespace FunBrainz {
 		}
 #pragma endregion
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
-				 MessageBox::Show("Hi");
-				 Login::Hide();
-				 OperatorsMain ^ form = gcnew OperatorsMain;
+				 try { 
+					 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection(); 
+					 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;"; 
+					 String ^ Sql = "Delete from Students where StudentId = 2"; 
+					 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con); 
+					 con->Open(); 
+					 command->ExecuteNonQuery(); 
+					 con->Close(); }
+				 catch (Exception ^ ex) { 
+					 MessageBox::Show(ex->Message); 
+				 } 
+				 MessageBox::Show("Hi"); 
+				 Login::Hide(); 
+				 OperatorsMain ^ form = gcnew OperatorsMain; 
 				 form->ShowDialog();
 	}
 	};
