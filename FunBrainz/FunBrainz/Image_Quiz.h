@@ -1,5 +1,17 @@
 #pragma once
 #include "Image_Quiz_Display.h"
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <string>
+#include <filesystem>
+#include <Windows.h>
+#include <algorithm>
+#include <iterator>
+
+using namespace std;
+
+
 namespace FunBrainz {
 
 	using namespace System;
@@ -55,9 +67,10 @@ namespace FunBrainz {
 			// 
 			// btn_Animal
 			// 
-			this->btn_Animal->Location = System::Drawing::Point(69, 119);
+			this->btn_Animal->Location = System::Drawing::Point(92, 146);
+			this->btn_Animal->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->btn_Animal->Name = L"btn_Animal";
-			this->btn_Animal->Size = System::Drawing::Size(105, 36);
+			this->btn_Animal->Size = System::Drawing::Size(140, 44);
 			this->btn_Animal->TabIndex = 0;
 			this->btn_Animal->Text = L"ANIMALS";
 			this->btn_Animal->UseVisualStyleBackColor = true;
@@ -65,20 +78,49 @@ namespace FunBrainz {
 			// 
 			// Image_Quiz
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(529, 485);
+			this->ClientSize = System::Drawing::Size(705, 597);
 			this->Controls->Add(this->btn_Animal);
+			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->Name = L"Image_Quiz";
 			this->Text = L"Image_Quiz";
+			this->Load += gcnew System::EventHandler(this, &Image_Quiz::Image_Quiz_Load);
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
+		//void read_directory(std::string& name)
+		//{
+		//	std::string pattern(name);
+		//	pattern.append("\\*");
+		//	WIN32_FIND_DATA data;
+		//	HANDLE hFind;
+		//	LPCWSTR var = LPCWSTR(pattern.c_str());
+		//	String ^str3 = gcnew String(pattern.c_str());
+		//	MessageBox::Show(str3);
+
+
+		//	if ((hFind = FindFirstFile(var, &data)) != INVALID_HANDLE_VALUE) {
+		//		do {
+		//			wstring ws(data.cFileName);
+		//			string str(ws.begin(), ws.end());
+		//			String ^str2 = gcnew String(str.c_str());
+		//			MessageBox::Show(str2);
+
+		//		} while (FindNextFile(hFind, &data) != 0);
+		//		FindClose(hFind);
+		//	}
+		//}
 	private: System::Void btn_Animal_Click(System::Object^  sender, System::EventArgs^  e) {
 				 Image_Quiz::Hide();
 				 Image_Quiz_Display ^ form = gcnew Image_Quiz_Display;
 				 form->ShowDialog();
 	}
+	private: System::Void Image_Quiz_Load(System::Object^  sender, System::EventArgs^  e) {
+
+	}
 	};
+
+	
 }

@@ -34,6 +34,9 @@ namespace FunBrainz {
 				delete components;
 			}
 		}
+	private: System::Windows::Forms::PictureBox^  PB_Quiz_Image;
+	private: System::Windows::Forms::Button^  btnNext;
+	protected:
 
 	private:
 		/// <summary>
@@ -48,12 +51,67 @@ namespace FunBrainz {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->components = gcnew System::ComponentModel::Container();
-			this->Size = System::Drawing::Size(300,300);
-			this->Text = L"Image_Quiz_Display";
-			this->Padding = System::Windows::Forms::Padding(0);
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Image_Quiz_Display::typeid));
+			this->PB_Quiz_Image = (gcnew System::Windows::Forms::PictureBox());
+			this->btnNext = (gcnew System::Windows::Forms::Button());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->PB_Quiz_Image))->BeginInit();
+			this->SuspendLayout();
+			// 
+			// PB_Quiz_Image
+			// 
+			this->PB_Quiz_Image->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"PB_Quiz_Image.Image")));
+			this->PB_Quiz_Image->Location = System::Drawing::Point(190, 43);
+			this->PB_Quiz_Image->Name = L"PB_Quiz_Image";
+			this->PB_Quiz_Image->Size = System::Drawing::Size(206, 173);
+			this->PB_Quiz_Image->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->PB_Quiz_Image->TabIndex = 0;
+			this->PB_Quiz_Image->TabStop = false;
+			// 
+			// btnNext
+			// 
+			this->btnNext->Location = System::Drawing::Point(254, 256);
+			this->btnNext->Name = L"btnNext";
+			this->btnNext->Size = System::Drawing::Size(75, 23);
+			this->btnNext->TabIndex = 1;
+			this->btnNext->Text = L"NEXT";
+			this->btnNext->UseVisualStyleBackColor = true;
+			// 
+			// Image_Quiz_Display
+			// 
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->ClientSize = System::Drawing::Size(616, 500);
+			this->Controls->Add(this->btnNext);
+			this->Controls->Add(this->PB_Quiz_Image);
+			this->Name = L"Image_Quiz_Display";
+			this->Text = L"Image_Quiz_Display";
+			this->Load += gcnew System::EventHandler(this, &Image_Quiz_Display::Image_Quiz_Display_Load);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->PB_Quiz_Image))->EndInit();
+			this->ResumeLayout(false);
+
 		}
 #pragma endregion
+	private: System::Void Image_Quiz_Display_Load(System::Object^  sender, System::EventArgs^  e) {
+				 try {
+					 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
+					 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
+					 //String^ domain = "Camel";
+					 int id = 1;
+					 String ^ Sql = "Select [Image] from Image_Quiz_Display where [PlayerID] = " + id + ";";
+					 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
+					 con->Open();
+					 //MessageBox::Show(command->ExecuteScalar()->ToString());
+					 command->ExecuteScalar();
+					 Image ^image1;
+					 String ^ str = "C:\\Users\\Vakul Gupta\\Desktop\\Software-3\\Child-Education\\FunBrainz\\FunBrainz\\media\\" + command->ExecuteScalar()->ToString();
+					 image1 = gcnew Bitmap(str);
+					 PB_Quiz_Image->Image = image1;
+
+					 con->Close();
+				 }
+				 catch (Exception ^ ex) {
+					 MessageBox::Show(ex->Message);
+				 }
+	}
 	};
 }
