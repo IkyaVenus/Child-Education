@@ -62,10 +62,10 @@ namespace FunBrainz {
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(66, 113);
-			this->button1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->button1->Location = System::Drawing::Point(88, 139);
+			this->button1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(56, 19);
+			this->button1->Size = System::Drawing::Size(75, 23);
 			this->button1->TabIndex = 0;
 			this->button1->Text = L"button1";
 			this->button1->UseVisualStyleBackColor = true;
@@ -73,9 +73,10 @@ namespace FunBrainz {
 			// 
 			// btn_2048
 			// 
-			this->btn_2048->Location = System::Drawing::Point(66, 60);
+			this->btn_2048->Location = System::Drawing::Point(88, 74);
+			this->btn_2048->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->btn_2048->Name = L"btn_2048";
-			this->btn_2048->Size = System::Drawing::Size(75, 23);
+			this->btn_2048->Size = System::Drawing::Size(100, 28);
 			this->btn_2048->TabIndex = 1;
 			this->btn_2048->Text = L"button2";
 			this->btn_2048->UseVisualStyleBackColor = true;
@@ -83,14 +84,15 @@ namespace FunBrainz {
 			// 
 			// Login
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(212, 206);
+			this->ClientSize = System::Drawing::Size(283, 254);
 			this->Controls->Add(this->btn_2048);
 			this->Controls->Add(this->button1);
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Name = L"Login";
 			this->Text = L"Login";
+			this->Load += gcnew System::EventHandler(this, &Login::Login_Load);
 			this->ResumeLayout(false);
 
 		}
@@ -115,8 +117,10 @@ namespace FunBrainz {
 	private: System::Void btn_2048_Click(System::Object^  sender, System::EventArgs^  e) {
 				 Login::Hide();
 				 MyForm1^ form = gcnew MyForm1;
+				 form->Begin();
 				 form->ShowDialog();
-			
 	}
-	};
+	private: System::Void Login_Load(System::Object^  sender, System::EventArgs^  e) {
+	}
+};
 }

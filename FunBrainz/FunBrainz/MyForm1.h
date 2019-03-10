@@ -3,6 +3,7 @@
 #include <string>
 #include <ctime>
 #include<utility>
+#include<algorithm>
 
 using namespace std;
 
@@ -83,6 +84,8 @@ namespace FunBrainz {
 	private: System::Windows::Forms::Button^  btnNewGame;
 	private: System::Windows::Forms::Label^  lbl_Score_Title;
 	private: System::Windows::Forms::Label^  lbl_Score_Value;
+	private: System::Windows::Forms::Label^  lblMax_Score_Title;
+	private: System::Windows::Forms::Label^  lblMax_Score_Value;
 
 
 
@@ -131,174 +134,176 @@ namespace FunBrainz {
 			this->btnNewGame = (gcnew System::Windows::Forms::Button());
 			this->lbl_Score_Title = (gcnew System::Windows::Forms::Label());
 			this->lbl_Score_Value = (gcnew System::Windows::Forms::Label());
+			this->lblMax_Score_Title = (gcnew System::Windows::Forms::Label());
+			this->lblMax_Score_Value = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// btn11
 			// 
-			this->btn11->Location = System::Drawing::Point(128, 76);
-			this->btn11->Margin = System::Windows::Forms::Padding(2);
+			this->btn11->Location = System::Drawing::Point(171, 94);
+			this->btn11->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn11->Name = L"btn11";
-			this->btn11->Size = System::Drawing::Size(78, 48);
+			this->btn11->Size = System::Drawing::Size(104, 59);
 			this->btn11->TabIndex = 0;
 			this->btn11->Text = L"button1";
 			this->btn11->UseVisualStyleBackColor = true;
 			// 
 			// btn33
 			// 
-			this->btn33->Location = System::Drawing::Point(293, 182);
-			this->btn33->Margin = System::Windows::Forms::Padding(2);
+			this->btn33->Location = System::Drawing::Point(391, 224);
+			this->btn33->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn33->Name = L"btn33";
-			this->btn33->Size = System::Drawing::Size(78, 48);
+			this->btn33->Size = System::Drawing::Size(104, 59);
 			this->btn33->TabIndex = 3;
 			this->btn33->Text = L"button1";
 			this->btn33->UseVisualStyleBackColor = true;
 			// 
 			// btn32
 			// 
-			this->btn32->Location = System::Drawing::Point(211, 182);
-			this->btn32->Margin = System::Windows::Forms::Padding(2);
+			this->btn32->Location = System::Drawing::Point(281, 224);
+			this->btn32->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn32->Name = L"btn32";
-			this->btn32->Size = System::Drawing::Size(78, 48);
+			this->btn32->Size = System::Drawing::Size(104, 59);
 			this->btn32->TabIndex = 4;
 			this->btn32->Text = L"button1";
 			this->btn32->UseVisualStyleBackColor = true;
 			// 
 			// btn31
 			// 
-			this->btn31->Location = System::Drawing::Point(128, 182);
-			this->btn31->Margin = System::Windows::Forms::Padding(2);
+			this->btn31->Location = System::Drawing::Point(171, 224);
+			this->btn31->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn31->Name = L"btn31";
-			this->btn31->Size = System::Drawing::Size(78, 48);
+			this->btn31->Size = System::Drawing::Size(104, 59);
 			this->btn31->TabIndex = 5;
 			this->btn31->Text = L"button1";
 			this->btn31->UseVisualStyleBackColor = true;
 			// 
 			// btn24
 			// 
-			this->btn24->Location = System::Drawing::Point(376, 129);
-			this->btn24->Margin = System::Windows::Forms::Padding(2);
+			this->btn24->Location = System::Drawing::Point(501, 159);
+			this->btn24->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn24->Name = L"btn24";
-			this->btn24->Size = System::Drawing::Size(78, 48);
+			this->btn24->Size = System::Drawing::Size(104, 59);
 			this->btn24->TabIndex = 6;
 			this->btn24->Text = L"button1";
 			this->btn24->UseVisualStyleBackColor = true;
 			// 
 			// btn23
 			// 
-			this->btn23->Location = System::Drawing::Point(293, 129);
-			this->btn23->Margin = System::Windows::Forms::Padding(2);
+			this->btn23->Location = System::Drawing::Point(391, 159);
+			this->btn23->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn23->Name = L"btn23";
-			this->btn23->Size = System::Drawing::Size(78, 48);
+			this->btn23->Size = System::Drawing::Size(104, 59);
 			this->btn23->TabIndex = 7;
 			this->btn23->Text = L"button1";
 			this->btn23->UseVisualStyleBackColor = true;
 			// 
 			// btn22
 			// 
-			this->btn22->Location = System::Drawing::Point(211, 129);
-			this->btn22->Margin = System::Windows::Forms::Padding(2);
+			this->btn22->Location = System::Drawing::Point(281, 159);
+			this->btn22->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn22->Name = L"btn22";
-			this->btn22->Size = System::Drawing::Size(78, 48);
+			this->btn22->Size = System::Drawing::Size(104, 59);
 			this->btn22->TabIndex = 8;
 			this->btn22->Text = L"button1";
 			this->btn22->UseVisualStyleBackColor = true;
 			// 
 			// btn21
 			// 
-			this->btn21->Location = System::Drawing::Point(128, 129);
-			this->btn21->Margin = System::Windows::Forms::Padding(2);
+			this->btn21->Location = System::Drawing::Point(171, 159);
+			this->btn21->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn21->Name = L"btn21";
-			this->btn21->Size = System::Drawing::Size(78, 48);
+			this->btn21->Size = System::Drawing::Size(104, 59);
 			this->btn21->TabIndex = 9;
 			this->btn21->Text = L"button1";
 			this->btn21->UseVisualStyleBackColor = true;
 			// 
 			// btn14
 			// 
-			this->btn14->Location = System::Drawing::Point(373, 76);
-			this->btn14->Margin = System::Windows::Forms::Padding(2);
+			this->btn14->Location = System::Drawing::Point(497, 94);
+			this->btn14->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn14->Name = L"btn14";
-			this->btn14->Size = System::Drawing::Size(78, 48);
+			this->btn14->Size = System::Drawing::Size(104, 59);
 			this->btn14->TabIndex = 10;
 			this->btn14->Text = L"button1";
 			this->btn14->UseVisualStyleBackColor = true;
 			// 
 			// btn13
 			// 
-			this->btn13->Location = System::Drawing::Point(293, 76);
-			this->btn13->Margin = System::Windows::Forms::Padding(2);
+			this->btn13->Location = System::Drawing::Point(391, 94);
+			this->btn13->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn13->Name = L"btn13";
-			this->btn13->Size = System::Drawing::Size(78, 48);
+			this->btn13->Size = System::Drawing::Size(104, 59);
 			this->btn13->TabIndex = 11;
 			this->btn13->Text = L"button1";
 			this->btn13->UseVisualStyleBackColor = true;
 			// 
 			// btn12
 			// 
-			this->btn12->Location = System::Drawing::Point(211, 76);
-			this->btn12->Margin = System::Windows::Forms::Padding(2);
+			this->btn12->Location = System::Drawing::Point(281, 94);
+			this->btn12->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn12->Name = L"btn12";
-			this->btn12->Size = System::Drawing::Size(78, 48);
+			this->btn12->Size = System::Drawing::Size(104, 59);
 			this->btn12->TabIndex = 12;
 			this->btn12->Text = L"button1";
 			this->btn12->UseVisualStyleBackColor = true;
 			// 
 			// btn34
 			// 
-			this->btn34->Location = System::Drawing::Point(376, 182);
-			this->btn34->Margin = System::Windows::Forms::Padding(2);
+			this->btn34->Location = System::Drawing::Point(501, 224);
+			this->btn34->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn34->Name = L"btn34";
-			this->btn34->Size = System::Drawing::Size(78, 48);
+			this->btn34->Size = System::Drawing::Size(104, 59);
 			this->btn34->TabIndex = 13;
 			this->btn34->Text = L"button1";
 			this->btn34->UseVisualStyleBackColor = true;
 			// 
 			// btn44
 			// 
-			this->btn44->Location = System::Drawing::Point(376, 234);
-			this->btn44->Margin = System::Windows::Forms::Padding(2);
+			this->btn44->Location = System::Drawing::Point(501, 288);
+			this->btn44->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn44->Name = L"btn44";
-			this->btn44->Size = System::Drawing::Size(78, 48);
+			this->btn44->Size = System::Drawing::Size(104, 59);
 			this->btn44->TabIndex = 14;
 			this->btn44->Text = L"button1";
 			this->btn44->UseVisualStyleBackColor = true;
 			// 
 			// btn43
 			// 
-			this->btn43->Location = System::Drawing::Point(293, 235);
-			this->btn43->Margin = System::Windows::Forms::Padding(2);
+			this->btn43->Location = System::Drawing::Point(391, 289);
+			this->btn43->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn43->Name = L"btn43";
-			this->btn43->Size = System::Drawing::Size(78, 48);
+			this->btn43->Size = System::Drawing::Size(104, 59);
 			this->btn43->TabIndex = 15;
 			this->btn43->Text = L"button1";
 			this->btn43->UseVisualStyleBackColor = true;
 			// 
 			// btn42
 			// 
-			this->btn42->Location = System::Drawing::Point(211, 235);
-			this->btn42->Margin = System::Windows::Forms::Padding(2);
+			this->btn42->Location = System::Drawing::Point(281, 289);
+			this->btn42->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn42->Name = L"btn42";
-			this->btn42->Size = System::Drawing::Size(78, 48);
+			this->btn42->Size = System::Drawing::Size(104, 59);
 			this->btn42->TabIndex = 16;
 			this->btn42->Text = L"button1";
 			this->btn42->UseVisualStyleBackColor = true;
 			// 
 			// btn41
 			// 
-			this->btn41->Location = System::Drawing::Point(128, 235);
-			this->btn41->Margin = System::Windows::Forms::Padding(2);
+			this->btn41->Location = System::Drawing::Point(171, 289);
+			this->btn41->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn41->Name = L"btn41";
-			this->btn41->Size = System::Drawing::Size(78, 48);
+			this->btn41->Size = System::Drawing::Size(104, 59);
 			this->btn41->TabIndex = 17;
 			this->btn41->Text = L"button1";
 			this->btn41->UseVisualStyleBackColor = true;
 			// 
 			// btnLeft
 			// 
-			this->btnLeft->Location = System::Drawing::Point(545, 158);
-			this->btnLeft->Margin = System::Windows::Forms::Padding(2);
+			this->btnLeft->Location = System::Drawing::Point(727, 194);
+			this->btnLeft->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btnLeft->Name = L"btnLeft";
-			this->btnLeft->Size = System::Drawing::Size(56, 19);
+			this->btnLeft->Size = System::Drawing::Size(75, 23);
 			this->btnLeft->TabIndex = 18;
 			this->btnLeft->Text = L"LEFT";
 			this->btnLeft->UseVisualStyleBackColor = true;
@@ -306,10 +311,10 @@ namespace FunBrainz {
 			// 
 			// btnDown
 			// 
-			this->btnDown->Location = System::Drawing::Point(606, 158);
-			this->btnDown->Margin = System::Windows::Forms::Padding(2);
+			this->btnDown->Location = System::Drawing::Point(808, 194);
+			this->btnDown->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btnDown->Name = L"btnDown";
-			this->btnDown->Size = System::Drawing::Size(56, 19);
+			this->btnDown->Size = System::Drawing::Size(75, 23);
 			this->btnDown->TabIndex = 19;
 			this->btnDown->Text = L"DOWN";
 			this->btnDown->UseVisualStyleBackColor = true;
@@ -317,10 +322,10 @@ namespace FunBrainz {
 			// 
 			// btnRight
 			// 
-			this->btnRight->Location = System::Drawing::Point(667, 158);
-			this->btnRight->Margin = System::Windows::Forms::Padding(2);
+			this->btnRight->Location = System::Drawing::Point(889, 194);
+			this->btnRight->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btnRight->Name = L"btnRight";
-			this->btnRight->Size = System::Drawing::Size(56, 19);
+			this->btnRight->Size = System::Drawing::Size(75, 23);
 			this->btnRight->TabIndex = 20;
 			this->btnRight->Text = L"RIGHT";
 			this->btnRight->UseVisualStyleBackColor = true;
@@ -328,10 +333,10 @@ namespace FunBrainz {
 			// 
 			// btnUp
 			// 
-			this->btnUp->Location = System::Drawing::Point(606, 135);
-			this->btnUp->Margin = System::Windows::Forms::Padding(2);
+			this->btnUp->Location = System::Drawing::Point(808, 166);
+			this->btnUp->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btnUp->Name = L"btnUp";
-			this->btnUp->Size = System::Drawing::Size(56, 19);
+			this->btnUp->Size = System::Drawing::Size(75, 23);
 			this->btnUp->TabIndex = 21;
 			this->btnUp->Text = L"UP";
 			this->btnUp->UseVisualStyleBackColor = true;
@@ -339,10 +344,10 @@ namespace FunBrainz {
 			// 
 			// btnNewGame
 			// 
-			this->btnNewGame->Location = System::Drawing::Point(590, 76);
-			this->btnNewGame->Margin = System::Windows::Forms::Padding(2);
+			this->btnNewGame->Location = System::Drawing::Point(787, 94);
+			this->btnNewGame->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btnNewGame->Name = L"btnNewGame";
-			this->btnNewGame->Size = System::Drawing::Size(92, 33);
+			this->btnNewGame->Size = System::Drawing::Size(123, 41);
 			this->btnNewGame->TabIndex = 22;
 			this->btnNewGame->Text = L"NEW GAME";
 			this->btnNewGame->UseVisualStyleBackColor = true;
@@ -351,28 +356,46 @@ namespace FunBrainz {
 			// lbl_Score_Title
 			// 
 			this->lbl_Score_Title->AutoSize = true;
-			this->lbl_Score_Title->Location = System::Drawing::Point(239, 52);
-			this->lbl_Score_Title->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->lbl_Score_Title->Location = System::Drawing::Point(319, 64);
 			this->lbl_Score_Title->Name = L"lbl_Score_Title";
-			this->lbl_Score_Title->Size = System::Drawing::Size(44, 13);
+			this->lbl_Score_Title->Size = System::Drawing::Size(56, 17);
 			this->lbl_Score_Title->TabIndex = 23;
 			this->lbl_Score_Title->Text = L"SCORE";
 			// 
 			// lbl_Score_Value
 			// 
 			this->lbl_Score_Value->AutoSize = true;
-			this->lbl_Score_Value->Location = System::Drawing::Point(291, 52);
-			this->lbl_Score_Value->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->lbl_Score_Value->Location = System::Drawing::Point(388, 64);
 			this->lbl_Score_Value->Name = L"lbl_Score_Value";
-			this->lbl_Score_Value->Size = System::Drawing::Size(13, 13);
+			this->lbl_Score_Value->Size = System::Drawing::Size(16, 17);
 			this->lbl_Score_Value->TabIndex = 24;
 			this->lbl_Score_Value->Text = L"0";
 			// 
+			// lblMax_Score_Title
+			// 
+			this->lblMax_Score_Title->AutoSize = true;
+			this->lblMax_Score_Title->Location = System::Drawing::Point(590, 42);
+			this->lblMax_Score_Title->Name = L"lblMax_Score_Title";
+			this->lblMax_Score_Title->Size = System::Drawing::Size(89, 17);
+			this->lblMax_Score_Title->TabIndex = 25;
+			this->lblMax_Score_Title->Text = L"MAX SCORE";
+			// 
+			// lblMax_Score_Value
+			// 
+			this->lblMax_Score_Value->AutoSize = true;
+			this->lblMax_Score_Value->Location = System::Drawing::Point(685, 42);
+			this->lblMax_Score_Value->Name = L"lblMax_Score_Value";
+			this->lblMax_Score_Value->Size = System::Drawing::Size(16, 17);
+			this->lblMax_Score_Value->TabIndex = 26;
+			this->lblMax_Score_Value->Text = L"0";
+			// 
 			// MyForm1
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(764, 427);
+			this->ClientSize = System::Drawing::Size(1019, 526);
+			this->Controls->Add(this->lblMax_Score_Value);
+			this->Controls->Add(this->lblMax_Score_Title);
 			this->Controls->Add(this->lbl_Score_Value);
 			this->Controls->Add(this->lbl_Score_Title);
 			this->Controls->Add(this->btnNewGame);
@@ -396,10 +419,9 @@ namespace FunBrainz {
 			this->Controls->Add(this->btn32);
 			this->Controls->Add(this->btn33);
 			this->Controls->Add(this->btn11);
-			this->Margin = System::Windows::Forms::Padding(2);
+			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Name = L"MyForm1";
 			this->Text = L"MyForm1";
-			this->Load += gcnew System::EventHandler(this, &MyForm1::MyForm1_Load_1);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -454,6 +476,26 @@ namespace FunBrainz {
 					break;
 				}
 			}
+
+			try {
+				OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
+				con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
+
+				//EXTRACT STUDENT_id FROM LOGIN PAGE DATA AND STORE IN STUID
+				int stuID = 1;
+
+				String ^ Sql = "Select [Max_Score] from 2048_Game where [StudentID] = " + stuID + ";";
+				OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
+				con->Open();
+				int dummy = (int)command->ExecuteScalar();
+				lblMax_Score_Value->Text = dummy.ToString();
+				con->Close();
+			}
+			catch (Exception ^ ex) {
+				MessageBox::Show(ex->Message);
+			}
+
+
 		}
 		bool is_Game_Over(){
 			array<Button ^, 2> ^buttons = { { btn11, btn12, btn13, btn14 }, { btn21, btn22, btn23, btn24 }, { btn31, btn32, btn33, btn34 }, { btn41, btn42, btn43, btn44 } };
@@ -589,6 +631,22 @@ namespace FunBrainz {
 				btnRight->Enabled = false;
 				btnUp->Enabled = false;
 				btnDown->Enabled = false;
+				try {
+					OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
+					con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
+
+					//EXTRACT STUDENT_id FROM LOGIN PAGE DATA AND STORE IN STUID
+					int dum_max_score = max(convert_string_to_int(lbl_Score_Value->Text),convert_string_to_int(lblMax_Score_Value->Text));
+					//MessageBox::Show(dum_max_score.ToString());
+					String ^ Sql = "UPDATE 2048_Game SET [Max_Score] = " + dum_max_score + ";";
+					OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
+					con->Open();
+					command->ExecuteScalar();
+					con->Close();
+				}
+				catch (Exception ^ ex) {
+					MessageBox::Show(ex->Message);
+				}
 				return;
 			}
 			array<Button ^, 2> ^buttons = { { btn11, btn12, btn13, btn14 }, { btn21, btn22, btn23, btn24 }, { btn31, btn32, btn33, btn34 }, { btn41, btn42, btn43, btn44 } };
@@ -658,6 +716,22 @@ namespace FunBrainz {
 				btnRight->Enabled = false;
 				btnUp->Enabled = false;
 				btnDown->Enabled = false;
+				try {
+					OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
+					con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
+
+					//EXTRACT STUDENT_id FROM LOGIN PAGE DATA AND STORE IN STUID
+					int dum_max_score = max(convert_string_to_int(lbl_Score_Value->Text), convert_string_to_int(lblMax_Score_Value->Text));
+					//MessageBox::Show(dum_max_score.ToString());
+					String ^ Sql = "UPDATE 2048_Game SET [Max_Score] = " + dum_max_score + ";";
+					OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
+					con->Open();
+					command->ExecuteScalar();
+					con->Close();
+				}
+				catch (Exception ^ ex) {
+					MessageBox::Show(ex->Message);
+				}
 				return;
 			}
 			array<Button ^, 2> ^buttons = { { btn11, btn12, btn13, btn14 }, { btn21, btn22, btn23, btn24 }, { btn31, btn32, btn33, btn34 }, { btn41, btn42, btn43, btn44 } };
@@ -725,6 +799,22 @@ namespace FunBrainz {
 				btnRight->Enabled = false;
 				btnUp->Enabled = false;
 				btnDown->Enabled = false;
+				try {
+					OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
+					con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
+
+					//EXTRACT STUDENT_id FROM LOGIN PAGE DATA AND STORE IN STUID
+					int dum_max_score = max(convert_string_to_int(lbl_Score_Value->Text), convert_string_to_int(lblMax_Score_Value->Text));
+					//MessageBox::Show(dum_max_score.ToString());
+					String ^ Sql = "UPDATE 2048_Game SET [Max_Score] = " + dum_max_score + ";";
+					OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
+					con->Open();
+					command->ExecuteScalar();
+					con->Close();
+				}
+				catch (Exception ^ ex) {
+					MessageBox::Show(ex->Message);
+				}
 				return;
 			}
 			array<Button ^, 2> ^buttons = { { btn11, btn12, btn13, btn14 }, { btn21, btn22, btn23, btn24 }, { btn31, btn32, btn33, btn34 }, { btn41, btn42, btn43, btn44 } };
@@ -792,6 +882,22 @@ namespace FunBrainz {
 				btnRight->Enabled = false;
 				btnUp->Enabled = false;
 				btnDown->Enabled = false;
+				try {
+					OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
+					con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
+
+					//EXTRACT STUDENT_id FROM LOGIN PAGE DATA AND STORE IN STUID
+					int dum_max_score = max(convert_string_to_int(lbl_Score_Value->Text), convert_string_to_int(lblMax_Score_Value->Text));
+					//MessageBox::Show(dum_max_score.ToString());
+					String ^ Sql = "UPDATE 2048_Game SET [Max_Score] = " + dum_max_score + ";";
+					OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
+					con->Open();
+					command->ExecuteScalar();
+					con->Close();
+				}
+				catch (Exception ^ ex) {
+					MessageBox::Show(ex->Message);
+				}
 				return;
 			}
 			array<Button ^, 2> ^buttons = { { btn11, btn12, btn13, btn14 }, { btn21, btn22, btn23, btn24 }, { btn31, btn32, btn33, btn34 }, { btn41, btn42, btn43, btn44 } };
@@ -860,7 +966,7 @@ namespace FunBrainz {
 			{
 				for (int j = 0; j < 4; j++)
 				{
-					if (buttons[i, j]->Text == "2048"){
+					if (buttons[i, j]->Text == "16"){
 						is_won = true;
 						break;
 					}
@@ -872,11 +978,28 @@ namespace FunBrainz {
 				btnRight->Enabled = false;
 				btnUp->Enabled = false;
 				btnDown->Enabled = false;
+				try {
+					OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
+					con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
+
+					//EXTRACT STUDENT_id FROM LOGIN PAGE DATA AND STORE IN STUID
+					int dum_max_score = max(convert_string_to_int(lbl_Score_Value->Text), convert_string_to_int(lblMax_Score_Value->Text));
+					//MessageBox::Show(dum_max_score.ToString());
+					String ^ Sql = "UPDATE 2048_Game SET [Max_Score] = " + dum_max_score + ";";
+					OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
+					con->Open();
+					command->ExecuteScalar();
+					con->Close();
+				}
+				catch (Exception ^ ex) {
+					MessageBox::Show(ex->Message);
+				}
 				return;
 			}
 
 		}
 	private: System::Void btnLeft_Click(System::Object^  sender, System::EventArgs^  e) {
+				 
 				 Move_Left();
 				 is_2048_found();
 	}
@@ -893,17 +1016,8 @@ namespace FunBrainz {
 				 Move_Up();
 				 is_2048_found();
 	}
-	private: System::Void MyForm1_Load(System::Object^  sender, System::EventArgs^  e) {
-	}
-	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
-	}
 	private: System::Void btnNewGame_Click(System::Object^  sender, System::EventArgs^  e) {
 				 Begin();
-	}
-
-
-
-	private: System::Void MyForm1_Load_1(System::Object^  sender, System::EventArgs^  e) {
 	}
 };
 }
