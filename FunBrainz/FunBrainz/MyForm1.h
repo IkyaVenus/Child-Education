@@ -966,7 +966,7 @@ namespace FunBrainz {
 			{
 				for (int j = 0; j < 4; j++)
 				{
-					if (buttons[i, j]->Text == "16"){
+					if (buttons[i, j]->Text == "2048"){
 						is_won = true;
 						break;
 					}

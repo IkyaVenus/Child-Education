@@ -2,6 +2,7 @@
 #include "OperatorsMain.h"
 #include "Cricket.h"
 #include "MyForm1.h"
+#include "Image_Quiz.h"
 
 namespace FunBrainz {
 
@@ -39,6 +40,7 @@ namespace FunBrainz {
 		}
 	private: System::Windows::Forms::Button^  button1;
 	private: System::Windows::Forms::Button^  btn_2048;
+	private: System::Windows::Forms::Button^  btn_Image_Quiz;
 	protected:
 
 	protected:
@@ -58,14 +60,15 @@ namespace FunBrainz {
 		{
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->btn_2048 = (gcnew System::Windows::Forms::Button());
+			this->btn_Image_Quiz = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(88, 139);
-			this->button1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->button1->Location = System::Drawing::Point(66, 113);
+			this->button1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(75, 23);
+			this->button1->Size = System::Drawing::Size(56, 19);
 			this->button1->TabIndex = 0;
 			this->button1->Text = L"button1";
 			this->button1->UseVisualStyleBackColor = true;
@@ -73,23 +76,33 @@ namespace FunBrainz {
 			// 
 			// btn_2048
 			// 
-			this->btn_2048->Location = System::Drawing::Point(88, 74);
-			this->btn_2048->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btn_2048->Location = System::Drawing::Point(66, 60);
 			this->btn_2048->Name = L"btn_2048";
-			this->btn_2048->Size = System::Drawing::Size(100, 28);
+			this->btn_2048->Size = System::Drawing::Size(75, 23);
 			this->btn_2048->TabIndex = 1;
-			this->btn_2048->Text = L"button2";
+			this->btn_2048->Text = L"2048 Game";
 			this->btn_2048->UseVisualStyleBackColor = true;
 			this->btn_2048->Click += gcnew System::EventHandler(this, &Login::btn_2048_Click);
 			// 
+			// btn_Image_Quiz
+			// 
+			this->btn_Image_Quiz->Location = System::Drawing::Point(66, 31);
+			this->btn_Image_Quiz->Name = L"btn_Image_Quiz";
+			this->btn_Image_Quiz->Size = System::Drawing::Size(75, 23);
+			this->btn_Image_Quiz->TabIndex = 2;
+			this->btn_Image_Quiz->Text = L"Image Quiz";
+			this->btn_Image_Quiz->UseVisualStyleBackColor = true;
+			this->btn_Image_Quiz->Click += gcnew System::EventHandler(this, &Login::btn_Image_Quiz_Click);
+			// 
 			// Login
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(283, 254);
+			this->ClientSize = System::Drawing::Size(212, 206);
+			this->Controls->Add(this->btn_Image_Quiz);
 			this->Controls->Add(this->btn_2048);
 			this->Controls->Add(this->button1);
-			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Name = L"Login";
 			this->Text = L"Login";
 			this->Load += gcnew System::EventHandler(this, &Login::Login_Load);
@@ -122,5 +135,10 @@ namespace FunBrainz {
 	}
 	private: System::Void Login_Load(System::Object^  sender, System::EventArgs^  e) {
 	}
+private: System::Void btn_Image_Quiz_Click(System::Object^  sender, System::EventArgs^  e) {
+			 Login::Hide();
+			 Image_Quiz^ form = gcnew Image_Quiz;
+			 form->ShowDialog();
+}
 };
 }

@@ -79,6 +79,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Cricket.cpp" />
+    <ClCompile Include="Image_Quiz.cpp" />
+    <ClCompile Include="Image_Quiz_Display.cpp" />
     <ClCompile Include="Login.cpp" />
     <ClCompile Include="MyForm1.cpp" />
     <ClCompile Include="OperatorsMain.cpp" />
@@ -86,6 +88,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cricket.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Image_Quiz.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Image_Quiz_Display.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Login.h">
@@ -101,6 +109,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Cricket.resx">
       <DependentUpon>Cricket.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Image_Quiz.resx">
+      <DependentUpon>Image_Quiz.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.h</DependentUpon>
