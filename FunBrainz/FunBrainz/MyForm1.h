@@ -6,7 +6,7 @@
 
 using namespace std;
 
-namespace Quiz_And_Puzzles {
+namespace FunBrainz {
 
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -16,12 +16,12 @@ namespace Quiz_And_Puzzles {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Summary for MyForm
+	/// Summary for MyForm1
 	/// </summary>
-	public ref class MyForm : public System::Windows::Forms::Form
+	public ref class MyForm1 : public System::Windows::Forms::Form
 	{
 	public:
-		MyForm(void)
+		MyForm1(void)
 		{
 			InitializeComponent();
 			//
@@ -33,7 +33,7 @@ namespace Quiz_And_Puzzles {
 		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
-		~MyForm()
+		~MyForm1()
 		{
 			if (components)
 			{
@@ -136,7 +136,7 @@ namespace Quiz_And_Puzzles {
 			// btn11
 			// 
 			this->btn11->Location = System::Drawing::Point(128, 76);
-			this->btn11->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btn11->Margin = System::Windows::Forms::Padding(2);
 			this->btn11->Name = L"btn11";
 			this->btn11->Size = System::Drawing::Size(78, 48);
 			this->btn11->TabIndex = 0;
@@ -146,7 +146,7 @@ namespace Quiz_And_Puzzles {
 			// btn33
 			// 
 			this->btn33->Location = System::Drawing::Point(293, 182);
-			this->btn33->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btn33->Margin = System::Windows::Forms::Padding(2);
 			this->btn33->Name = L"btn33";
 			this->btn33->Size = System::Drawing::Size(78, 48);
 			this->btn33->TabIndex = 3;
@@ -156,7 +156,7 @@ namespace Quiz_And_Puzzles {
 			// btn32
 			// 
 			this->btn32->Location = System::Drawing::Point(211, 182);
-			this->btn32->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btn32->Margin = System::Windows::Forms::Padding(2);
 			this->btn32->Name = L"btn32";
 			this->btn32->Size = System::Drawing::Size(78, 48);
 			this->btn32->TabIndex = 4;
@@ -166,7 +166,7 @@ namespace Quiz_And_Puzzles {
 			// btn31
 			// 
 			this->btn31->Location = System::Drawing::Point(128, 182);
-			this->btn31->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btn31->Margin = System::Windows::Forms::Padding(2);
 			this->btn31->Name = L"btn31";
 			this->btn31->Size = System::Drawing::Size(78, 48);
 			this->btn31->TabIndex = 5;
@@ -176,7 +176,7 @@ namespace Quiz_And_Puzzles {
 			// btn24
 			// 
 			this->btn24->Location = System::Drawing::Point(376, 129);
-			this->btn24->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btn24->Margin = System::Windows::Forms::Padding(2);
 			this->btn24->Name = L"btn24";
 			this->btn24->Size = System::Drawing::Size(78, 48);
 			this->btn24->TabIndex = 6;
@@ -186,7 +186,7 @@ namespace Quiz_And_Puzzles {
 			// btn23
 			// 
 			this->btn23->Location = System::Drawing::Point(293, 129);
-			this->btn23->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btn23->Margin = System::Windows::Forms::Padding(2);
 			this->btn23->Name = L"btn23";
 			this->btn23->Size = System::Drawing::Size(78, 48);
 			this->btn23->TabIndex = 7;
@@ -196,7 +196,7 @@ namespace Quiz_And_Puzzles {
 			// btn22
 			// 
 			this->btn22->Location = System::Drawing::Point(211, 129);
-			this->btn22->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btn22->Margin = System::Windows::Forms::Padding(2);
 			this->btn22->Name = L"btn22";
 			this->btn22->Size = System::Drawing::Size(78, 48);
 			this->btn22->TabIndex = 8;
@@ -206,7 +206,7 @@ namespace Quiz_And_Puzzles {
 			// btn21
 			// 
 			this->btn21->Location = System::Drawing::Point(128, 129);
-			this->btn21->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btn21->Margin = System::Windows::Forms::Padding(2);
 			this->btn21->Name = L"btn21";
 			this->btn21->Size = System::Drawing::Size(78, 48);
 			this->btn21->TabIndex = 9;
@@ -216,7 +216,7 @@ namespace Quiz_And_Puzzles {
 			// btn14
 			// 
 			this->btn14->Location = System::Drawing::Point(373, 76);
-			this->btn14->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btn14->Margin = System::Windows::Forms::Padding(2);
 			this->btn14->Name = L"btn14";
 			this->btn14->Size = System::Drawing::Size(78, 48);
 			this->btn14->TabIndex = 10;
@@ -226,7 +226,7 @@ namespace Quiz_And_Puzzles {
 			// btn13
 			// 
 			this->btn13->Location = System::Drawing::Point(293, 76);
-			this->btn13->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btn13->Margin = System::Windows::Forms::Padding(2);
 			this->btn13->Name = L"btn13";
 			this->btn13->Size = System::Drawing::Size(78, 48);
 			this->btn13->TabIndex = 11;
@@ -236,7 +236,7 @@ namespace Quiz_And_Puzzles {
 			// btn12
 			// 
 			this->btn12->Location = System::Drawing::Point(211, 76);
-			this->btn12->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btn12->Margin = System::Windows::Forms::Padding(2);
 			this->btn12->Name = L"btn12";
 			this->btn12->Size = System::Drawing::Size(78, 48);
 			this->btn12->TabIndex = 12;
@@ -246,7 +246,7 @@ namespace Quiz_And_Puzzles {
 			// btn34
 			// 
 			this->btn34->Location = System::Drawing::Point(376, 182);
-			this->btn34->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btn34->Margin = System::Windows::Forms::Padding(2);
 			this->btn34->Name = L"btn34";
 			this->btn34->Size = System::Drawing::Size(78, 48);
 			this->btn34->TabIndex = 13;
@@ -256,7 +256,7 @@ namespace Quiz_And_Puzzles {
 			// btn44
 			// 
 			this->btn44->Location = System::Drawing::Point(376, 234);
-			this->btn44->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btn44->Margin = System::Windows::Forms::Padding(2);
 			this->btn44->Name = L"btn44";
 			this->btn44->Size = System::Drawing::Size(78, 48);
 			this->btn44->TabIndex = 14;
@@ -266,7 +266,7 @@ namespace Quiz_And_Puzzles {
 			// btn43
 			// 
 			this->btn43->Location = System::Drawing::Point(293, 235);
-			this->btn43->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btn43->Margin = System::Windows::Forms::Padding(2);
 			this->btn43->Name = L"btn43";
 			this->btn43->Size = System::Drawing::Size(78, 48);
 			this->btn43->TabIndex = 15;
@@ -276,7 +276,7 @@ namespace Quiz_And_Puzzles {
 			// btn42
 			// 
 			this->btn42->Location = System::Drawing::Point(211, 235);
-			this->btn42->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btn42->Margin = System::Windows::Forms::Padding(2);
 			this->btn42->Name = L"btn42";
 			this->btn42->Size = System::Drawing::Size(78, 48);
 			this->btn42->TabIndex = 16;
@@ -286,7 +286,7 @@ namespace Quiz_And_Puzzles {
 			// btn41
 			// 
 			this->btn41->Location = System::Drawing::Point(128, 235);
-			this->btn41->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btn41->Margin = System::Windows::Forms::Padding(2);
 			this->btn41->Name = L"btn41";
 			this->btn41->Size = System::Drawing::Size(78, 48);
 			this->btn41->TabIndex = 17;
@@ -296,57 +296,57 @@ namespace Quiz_And_Puzzles {
 			// btnLeft
 			// 
 			this->btnLeft->Location = System::Drawing::Point(545, 158);
-			this->btnLeft->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btnLeft->Margin = System::Windows::Forms::Padding(2);
 			this->btnLeft->Name = L"btnLeft";
 			this->btnLeft->Size = System::Drawing::Size(56, 19);
 			this->btnLeft->TabIndex = 18;
 			this->btnLeft->Text = L"LEFT";
 			this->btnLeft->UseVisualStyleBackColor = true;
-			this->btnLeft->Click += gcnew System::EventHandler(this, &MyForm::btnLeft_Click);
+			this->btnLeft->Click += gcnew System::EventHandler(this, &MyForm1::btnLeft_Click);
 			// 
 			// btnDown
 			// 
 			this->btnDown->Location = System::Drawing::Point(606, 158);
-			this->btnDown->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btnDown->Margin = System::Windows::Forms::Padding(2);
 			this->btnDown->Name = L"btnDown";
 			this->btnDown->Size = System::Drawing::Size(56, 19);
 			this->btnDown->TabIndex = 19;
 			this->btnDown->Text = L"DOWN";
 			this->btnDown->UseVisualStyleBackColor = true;
-			this->btnDown->Click += gcnew System::EventHandler(this, &MyForm::btnDown_Click);
+			this->btnDown->Click += gcnew System::EventHandler(this, &MyForm1::btnDown_Click);
 			// 
 			// btnRight
 			// 
 			this->btnRight->Location = System::Drawing::Point(667, 158);
-			this->btnRight->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btnRight->Margin = System::Windows::Forms::Padding(2);
 			this->btnRight->Name = L"btnRight";
 			this->btnRight->Size = System::Drawing::Size(56, 19);
 			this->btnRight->TabIndex = 20;
 			this->btnRight->Text = L"RIGHT";
 			this->btnRight->UseVisualStyleBackColor = true;
-			this->btnRight->Click += gcnew System::EventHandler(this, &MyForm::btnRight_Click);
+			this->btnRight->Click += gcnew System::EventHandler(this, &MyForm1::btnRight_Click);
 			// 
 			// btnUp
 			// 
 			this->btnUp->Location = System::Drawing::Point(606, 135);
-			this->btnUp->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btnUp->Margin = System::Windows::Forms::Padding(2);
 			this->btnUp->Name = L"btnUp";
 			this->btnUp->Size = System::Drawing::Size(56, 19);
 			this->btnUp->TabIndex = 21;
 			this->btnUp->Text = L"UP";
 			this->btnUp->UseVisualStyleBackColor = true;
-			this->btnUp->Click += gcnew System::EventHandler(this, &MyForm::btnUp_Click);
+			this->btnUp->Click += gcnew System::EventHandler(this, &MyForm1::btnUp_Click);
 			// 
 			// btnNewGame
 			// 
 			this->btnNewGame->Location = System::Drawing::Point(590, 76);
-			this->btnNewGame->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btnNewGame->Margin = System::Windows::Forms::Padding(2);
 			this->btnNewGame->Name = L"btnNewGame";
 			this->btnNewGame->Size = System::Drawing::Size(92, 33);
 			this->btnNewGame->TabIndex = 22;
 			this->btnNewGame->Text = L"NEW GAME";
 			this->btnNewGame->UseVisualStyleBackColor = true;
-			this->btnNewGame->Click += gcnew System::EventHandler(this, &MyForm::btnNewGame_Click);
+			this->btnNewGame->Click += gcnew System::EventHandler(this, &MyForm1::btnNewGame_Click);
 			// 
 			// lbl_Score_Title
 			// 
@@ -368,7 +368,7 @@ namespace Quiz_And_Puzzles {
 			this->lbl_Score_Value->TabIndex = 24;
 			this->lbl_Score_Value->Text = L"0";
 			// 
-			// MyForm
+			// MyForm1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
@@ -396,9 +396,10 @@ namespace Quiz_And_Puzzles {
 			this->Controls->Add(this->btn32);
 			this->Controls->Add(this->btn33);
 			this->Controls->Add(this->btn11);
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
-			this->Name = L"MyForm";
-			this->Text = L"MyForm";
+			this->Margin = System::Windows::Forms::Padding(2);
+			this->Name = L"MyForm1";
+			this->Text = L"MyForm1";
+			this->Load += gcnew System::EventHandler(this, &MyForm1::MyForm1_Load_1);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -411,7 +412,7 @@ namespace Quiz_And_Puzzles {
 			int base = 1;
 			int ans = 0;
 			for (int i = s->Length - 1; i >= 0; i--){
-				ans += (s[i]-48) * base;
+				ans += (s[i] - 48) * base;
 				base *= 10;
 			}
 			return ans;
@@ -429,6 +430,7 @@ namespace Quiz_And_Puzzles {
 			return flag;
 		}
 		void Begin(){
+
 			btnLeft->Enabled = true;
 			btnRight->Enabled = true;
 			btnUp->Enabled = true;
@@ -602,13 +604,13 @@ namespace Quiz_And_Puzzles {
 				array<String^> ^help_arr_2 = { "", "", "", "" };
 				int help_arr_2_size = 0;
 				int j = 0;
-				for (j = 0; j < help_arr_1_size-1; j++){
+				for (j = 0; j < help_arr_1_size - 1; j++){
 					if (help_arr_1[j] != help_arr_1[j + 1]){
 						help_arr_2[help_arr_2_size++] = help_arr_1[j];
 						continue;
 					}
 					score += (2 * convert_string_to_int(help_arr_1[j]));
-					help_arr_2[help_arr_2_size++] = (2*convert_string_to_int(help_arr_1[j])).ToString();
+					help_arr_2[help_arr_2_size++] = (2 * convert_string_to_int(help_arr_1[j])).ToString();
 					j++;
 				}
 				if (j == (help_arr_1_size - 1)){
@@ -671,7 +673,7 @@ namespace Quiz_And_Puzzles {
 				array<String^> ^help_arr_2 = { "", "", "", "" };
 				int help_arr_2_size = 3;
 				int j = 0;
-				for (j = help_arr_1_size-1; j > 0; j--){
+				for (j = help_arr_1_size - 1; j > 0; j--){
 					if (help_arr_1[j] != help_arr_1[j - 1]){
 						help_arr_2[help_arr_2_size--] = help_arr_1[j];
 						continue;
@@ -874,29 +876,34 @@ namespace Quiz_And_Puzzles {
 			}
 
 		}
-private: System::Void btnLeft_Click(System::Object^  sender, System::EventArgs^  e) {
-			 Move_Left();
-			 is_2048_found();
-}
-private: System::Void btnDown_Click(System::Object^  sender, System::EventArgs^  e) {
-			 Move_Down();
-			 is_2048_found();
+	private: System::Void btnLeft_Click(System::Object^  sender, System::EventArgs^  e) {
+				 Move_Left();
+				 is_2048_found();
+	}
+	private: System::Void btnDown_Click(System::Object^  sender, System::EventArgs^  e) {
+				 Move_Down();
+				 is_2048_found();
 
-}
-private: System::Void btnRight_Click(System::Object^  sender, System::EventArgs^  e) {
-			 Move_Right();
-			 is_2048_found();
-}
-private: System::Void btnUp_Click(System::Object^  sender, System::EventArgs^  e) {
-			 Move_Up();
-			 is_2048_found();
-}
-private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
-}
-private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
-}
-private: System::Void btnNewGame_Click(System::Object^  sender, System::EventArgs^  e) {
-			 Begin();
-}
+	}
+	private: System::Void btnRight_Click(System::Object^  sender, System::EventArgs^  e) {
+				 Move_Right();
+				 is_2048_found();
+	}
+	private: System::Void btnUp_Click(System::Object^  sender, System::EventArgs^  e) {
+				 Move_Up();
+				 is_2048_found();
+	}
+	private: System::Void MyForm1_Load(System::Object^  sender, System::EventArgs^  e) {
+	}
+	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+	}
+	private: System::Void btnNewGame_Click(System::Object^  sender, System::EventArgs^  e) {
+				 Begin();
+	}
+
+
+
+	private: System::Void MyForm1_Load_1(System::Object^  sender, System::EventArgs^  e) {
+	}
 };
 }
