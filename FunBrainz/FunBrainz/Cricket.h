@@ -86,72 +86,80 @@ namespace FunBrainz {
 			// QuestionLabel
 			// 
 			this->QuestionLabel->AutoSize = true;
-			this->QuestionLabel->Location = System::Drawing::Point(384, 132);
+			this->QuestionLabel->Location = System::Drawing::Point(288, 107);
+			this->QuestionLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->QuestionLabel->Name = L"QuestionLabel";
-			this->QuestionLabel->Size = System::Drawing::Size(62, 17);
+			this->QuestionLabel->Size = System::Drawing::Size(47, 13);
 			this->QuestionLabel->TabIndex = 0;
 			this->QuestionLabel->Text = L"question";
 			// 
 			// LevelLabel
 			// 
 			this->LevelLabel->AutoSize = true;
-			this->LevelLabel->Location = System::Drawing::Point(736, 36);
+			this->LevelLabel->Location = System::Drawing::Point(552, 29);
+			this->LevelLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->LevelLabel->Name = L"LevelLabel";
-			this->LevelLabel->Size = System::Drawing::Size(59, 17);
+			this->LevelLabel->Size = System::Drawing::Size(45, 13);
 			this->LevelLabel->TabIndex = 1;
 			this->LevelLabel->Text = L"Level -1";
 			// 
 			// TargetLabel
 			// 
 			this->TargetLabel->AutoSize = true;
-			this->TargetLabel->Location = System::Drawing::Point(33, 36);
+			this->TargetLabel->Location = System::Drawing::Point(25, 29);
+			this->TargetLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->TargetLabel->Name = L"TargetLabel";
-			this->TargetLabel->Size = System::Drawing::Size(50, 17);
+			this->TargetLabel->Size = System::Drawing::Size(38, 13);
 			this->TargetLabel->TabIndex = 2;
 			this->TargetLabel->Text = L"Target";
 			// 
 			// ScoreLabel
 			// 
 			this->ScoreLabel->AutoSize = true;
-			this->ScoreLabel->Location = System::Drawing::Point(120, 36);
+			this->ScoreLabel->Location = System::Drawing::Point(90, 29);
+			this->ScoreLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->ScoreLabel->Name = L"ScoreLabel";
-			this->ScoreLabel->Size = System::Drawing::Size(45, 17);
+			this->ScoreLabel->Size = System::Drawing::Size(35, 13);
 			this->ScoreLabel->TabIndex = 3;
 			this->ScoreLabel->Text = L"Score";
 			// 
 			// OversLeftLabel
 			// 
 			this->OversLeftLabel->AutoSize = true;
-			this->OversLeftLabel->Location = System::Drawing::Point(319, 36);
+			this->OversLeftLabel->Location = System::Drawing::Point(239, 29);
+			this->OversLeftLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->OversLeftLabel->Name = L"OversLeftLabel";
-			this->OversLeftLabel->Size = System::Drawing::Size(74, 17);
+			this->OversLeftLabel->Size = System::Drawing::Size(56, 13);
 			this->OversLeftLabel->TabIndex = 4;
 			this->OversLeftLabel->Text = L"Overs Left";
 			// 
 			// RunsNeededLabel
 			// 
 			this->RunsNeededLabel->AutoSize = true;
-			this->RunsNeededLabel->Location = System::Drawing::Point(200, 36);
+			this->RunsNeededLabel->Location = System::Drawing::Point(150, 29);
+			this->RunsNeededLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->RunsNeededLabel->Name = L"RunsNeededLabel";
-			this->RunsNeededLabel->Size = System::Drawing::Size(95, 17);
+			this->RunsNeededLabel->Size = System::Drawing::Size(73, 13);
 			this->RunsNeededLabel->TabIndex = 5;
 			this->RunsNeededLabel->Text = L"Runs Needed";
 			// 
 			// Batsman1ScoreLabel
 			// 
 			this->Batsman1ScoreLabel->AutoSize = true;
-			this->Batsman1ScoreLabel->Location = System::Drawing::Point(424, 36);
+			this->Batsman1ScoreLabel->Location = System::Drawing::Point(318, 29);
+			this->Batsman1ScoreLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->Batsman1ScoreLabel->Name = L"Batsman1ScoreLabel";
-			this->Batsman1ScoreLabel->Size = System::Drawing::Size(71, 17);
+			this->Batsman1ScoreLabel->Size = System::Drawing::Size(54, 13);
 			this->Batsman1ScoreLabel->TabIndex = 6;
 			this->Batsman1ScoreLabel->Text = L"Batsman1";
 			// 
 			// Batsman2Label
 			// 
 			this->Batsman2Label->AutoSize = true;
-			this->Batsman2Label->Location = System::Drawing::Point(545, 36);
+			this->Batsman2Label->Location = System::Drawing::Point(409, 29);
+			this->Batsman2Label->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->Batsman2Label->Name = L"Batsman2Label";
-			this->Batsman2Label->Size = System::Drawing::Size(71, 17);
+			this->Batsman2Label->Size = System::Drawing::Size(54, 13);
 			this->Batsman2Label->TabIndex = 7;
 			this->Batsman2Label->Text = L"Batsman2";
 			// 
@@ -159,9 +167,10 @@ namespace FunBrainz {
 			// 
 			this->SliderPanel->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"SliderPanel.BackgroundImage")));
 			this->SliderPanel->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->SliderPanel->Location = System::Drawing::Point(99, 372);
+			this->SliderPanel->Location = System::Drawing::Point(74, 302);
+			this->SliderPanel->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->SliderPanel->Name = L"SliderPanel";
-			this->SliderPanel->Size = System::Drawing::Size(38, 37);
+			this->SliderPanel->Size = System::Drawing::Size(28, 30);
 			this->SliderPanel->TabIndex = 8;
 			// 
 			// SliderTimer
@@ -171,9 +180,9 @@ namespace FunBrainz {
 			// 
 			// Cricket
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(847, 545);
+			this->ClientSize = System::Drawing::Size(635, 443);
 			this->Controls->Add(this->SliderPanel);
 			this->Controls->Add(this->Batsman2Label);
 			this->Controls->Add(this->Batsman1ScoreLabel);
@@ -183,6 +192,7 @@ namespace FunBrainz {
 			this->Controls->Add(this->TargetLabel);
 			this->Controls->Add(this->LevelLabel);
 			this->Controls->Add(this->QuestionLabel);
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Name = L"Cricket";
 			this->Text = L"Cricket";
 			this->Load += gcnew System::EventHandler(this, &Cricket::Cricket_Load);
