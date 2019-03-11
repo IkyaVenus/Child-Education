@@ -196,6 +196,18 @@ namespace FunBrainz {
 		int xloc = 0;
 		int sliderFlag = 0;
 
+		int target;
+		int score;
+		int runsneeded;
+		int oversleft;
+		int ballsleft;
+		int wicketslost;
+		String ^ batsman1;
+		String ^ batsman2;
+		int batsman1score;
+		int batsman2score;
+		int currbatsman;
+
 	private: System::Void Cricket_Load(System::Object^  sender, System::EventArgs^  e) {
 				 try {
 					 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
@@ -210,7 +222,7 @@ namespace FunBrainz {
 				 catch (Exception ^ ex) {
 					 MessageBox::Show(ex->Message);
 				 }
-				 SliderTimer->Start();
+				 StartGame();
 	}
 private: System::Void SliderTimer_Tick(System::Object^  sender, System::EventArgs^  e) {
 			 if (sliderFlag ==0)
@@ -230,5 +242,20 @@ private: System::Void SliderTimer_Tick(System::Object^  sender, System::EventArg
 				 sliderFlag %= 2;
 			 }
 }
+	
+	private: Void StartGame()
+	{
+				 score = 0;
+				 ballsleft = 0;
+				 wicketslost = 0;
+				 batsman1score = 0;
+				 batsman1 = "Rohit Sharma";
+				 batsman2 = "Shikhar Dhawan";
+				 batsman2score = 0;
+				 oversleft = level;
+				 wicketslost = 0;
+				 currbatsman = 1;
+				 
+	}
 };
 }
