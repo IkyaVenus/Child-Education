@@ -1,7 +1,6 @@
 #pragma once
 #include "OperatorsMain.h"
 #include "Cricket.h"
-#include "generalfuncs.h"
 namespace FunBrainz {
 
 	using namespace System;
@@ -75,6 +74,7 @@ namespace FunBrainz {
 			this->Controls->Add(this->button1);
 			this->Name = L"Login";
 			this->Text = L"Login";
+			this->Load += gcnew System::EventHandler(this, &Login::Login_Load);
 			this->ResumeLayout(false);
 
 		}
@@ -92,11 +92,11 @@ namespace FunBrainz {
 					 MessageBox::Show(ex->Message); 
 				 } 
 				 MessageBox::Show("Hi"); 
-				 String ^ x = gcnew String(generateQuestion(4, 3).first.c_str());
-				 MessageBox::Show(x);
-				 Login::Hide(); 
 				 Cricket ^ form = gcnew Cricket; 
 				 form->ShowDialog();
+	}
+	private: System::Void Login_Load(System::Object^  sender, System::EventArgs^  e) {
+				 srand(time(0));
 	}
 	};
 }
