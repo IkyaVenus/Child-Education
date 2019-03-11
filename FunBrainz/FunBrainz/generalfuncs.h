@@ -1,3 +1,5 @@
+#ifndef GENQUES
+#define GENQUES
 #include <stdio.h>  
 #include <utility> 
 #include<cmath>
@@ -100,27 +102,5 @@ pair <string, long int> generateQuestion(int operatorIndex, int level)
 	}
 
 }
+#endif
 
-/*int main()
-{
-	srand(time(0));
-	pair < string, long int > temp;
-
-	temp = generateQuestion(2, 1);
-	cout << temp.first << " " << temp.second << endl;
-
-
-
-
-	for (int i = 1; i <= 10; i++)
-	{
-		for (int j = 0; j <= 4; j++)
-		{
-			temp = generateQuestion(j, i);
-			cout << temp.first << " " << temp.second << endl;
-
-		}
-
-	}
-
-}*/

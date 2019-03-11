@@ -81,7 +81,6 @@
     <ClCompile Include="Cricket.cpp" />
     <ClCompile Include="Login.cpp" />
     <ClCompile Include="OperatorsMain.cpp" />
-    <ClCompile Include="questionGenerator.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cricket.h">

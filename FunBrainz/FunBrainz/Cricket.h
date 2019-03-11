@@ -1,5 +1,4 @@
 #pragma once
-//#include "questionGenerator.cpp"
 namespace FunBrainz {
 
 	using namespace System;
